@@ -1,0 +1,10 @@
+*.o
+*.a
+.DS_Store
+*.swp
+# fdf / immagini o mappe
+*.bmp
+*.png
+*.xpm
+# build MLX (se presente)
+mlx*/build/
