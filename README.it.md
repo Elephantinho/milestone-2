@@ -1,6 +1,3 @@
-
-### D) `README.it.md` (root della repo milestone-2)
-```markdown
 <p align="right">
   🌐 Disponibile in:
   <a href="README.md"><b>English</b></a> | <a href="README.it.md"><b>Italiano</b></a>
@@ -19,3 +16,4 @@ milestone-2/
 ├─ push_swap/
 ├─ fdf/
 └─ pipex/
+
