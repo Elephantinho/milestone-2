@@ -1,24 +1,21 @@
+
+### D) `README.it.md` (root della repo milestone-2)
+```markdown
 <p align="right">
   🌐 Disponibile in:
-  <a href="./README.md"><b>English</b></a> | <a href="./README.it.md"><b>Italiano</b></a>
+  <a href="README.md"><b>English</b></a> | <a href="README.it.md"><b>Italiano</b></a>
 </p>
 
-# 🔀 push_swap
+# 🧩 Milestone 2
 
-## 📝 Descrizione
-Algoritmo in C per ordinare una pila di interi usando **solo** un set limitato di operazioni su due stack (`a` e `b`). Obiettivo: **minimizzare il numero di mosse** nel rispetto delle regole del progetto 42.
+Raccolta di progetti del cursus 42 Firenze:
+- [`push_swap/`](./push_swap) — Algoritmo di sorting su due stack con set limitato di operazioni.
+- [`fdf/`](./fdf) — Visualizzatore wireframe 3D in isometria con MiniLibX.
+- [`pipex/`](./pipex) — Pipeline alla shell con redirezioni e gestione dei processi.
 
-## ⚙️ Caratteristiche
-- Implementazione di operazioni: `sa sb ss pa pb ra rb rra rrb rrr`
-- Strategie per piccoli input (es. 3/5 elementi) e grandi insiemi
-- Gestione input/validazioni, parsing, error handling
-
-## 🧠 Competenze acquisite
-- Analisi di complessità e progettazione di algoritmi
-- Strutture dati (stack) e ottimizzazione delle mosse
-- Codice modulare e testabile in C
-
-## 🛠️ Compilazione
-```bash
-make
-./push_swap "2 1 3 6 5 8"
+## Struttura
+milestone-2/
+├─ README.md / README.it.md
+├─ push_swap/
+├─ fdf/
+└─ pipex/
