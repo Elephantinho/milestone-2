@@ -17,3 +17,7 @@ milestone-2/
 ├─ fdf/
 └─ pipex/
 
+
+## Topics (repo)
+`C, push-swap, fdf, pipex, algorithms, graphics, minilibx, unix, 42school`
+
