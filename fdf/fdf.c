@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   fdf.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mshahein <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mshahein <mshahein@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/01 16:46:34 by mshahein          #+#    #+#             */
-/*   Updated: 2025/03/03 11:14:21 by mshahein         ###   ########.fr       */
+/*   Updated: 2026/09/15 10:05:45 by mshahein         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ int	main(int ac, char **av)
 	mlx_put_image_to_window(qwe.mlx, qwe.win, qwe.img.img, 0, 0);
 	mlx_hook(qwe.win, 17, 0, close_window, &qwe);
 	mlx_key_hook(qwe.win, key_press, &qwe);
-	mlx_loop_hook(qwe.mlx, handle_input, &qwe);
+	//mlx_loop_hook(qwe.mlx, handle_input, &qwe);
 	mlx_loop(qwe.mlx);
 	return (0);
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   close.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mshahein <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mshahein <mshahein@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/01 16:46:16 by mshahein          #+#    #+#             */
-/*   Updated: 2025/03/01 16:46:18 by mshahein         ###   ########.fr       */
+/*   Updated: 2026/09/15 10:06:11 by mshahein         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ int	key_press(int keycode, t_window *qwe)
 		qwe->angle_y += 0.1;
 	else if (keycode == 61)
 		qwe->zoom += 1;
-	else if (keycode == 45)
+	else if (keycode == 45 && qwe->zoom > 1)
 		qwe->zoom -= 1;
 	else if (keycode == 119)
 		qwe->offset_y -= 10;
@@ -50,17 +50,23 @@ int	key_press(int keycode, t_window *qwe)
 		qwe->offset_x -= 10;
 	else if (keycode == 100)
 		qwe->offset_x += 10;
+	handle_input(qwe);
 	return (0);
 }
 
 int	handle_input(t_window *qwe)
 {
-	mlx_destroy_image(qwe->mlx, qwe->img.img);
-	qwe->img.img = mlx_new_image(qwe->mlx, WIN_X, WIN_Y);
-	qwe->img.addr = mlx_get_data_addr(qwe->img.img, &qwe->img.bits_per_pixel,
-			&qwe->img.line_length, &qwe->img.endian);
-	mlx_clear_window(qwe->mlx, qwe->win);
+	ft_bzero(qwe->img.addr, qwe->img.line_length * WIN_Y);
+
 	create_imagine(&qwe->mat, qwe->img, qwe);
-	mlx_put_image_to_window(qwe->mlx, qwe->win, qwe->img.img, 0, 0);
+
+	mlx_put_image_to_window(
+		qwe->mlx,
+		qwe->win,
+		qwe->img.img,
+		0,
+		0
+	);
+
 	return (0);
 }
